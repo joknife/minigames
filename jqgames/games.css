@@ -1,0 +1,93 @@
+* {
+	margin: 0;
+}
+
+#header {
+	height: 125px;
+	background-color: #444;
+}
+
+#header a {
+	float: left;
+}
+
+#logo {
+	color: #ccc;
+	width: 50%;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+button {
+	display: block;
+	width: 180px;
+	margin: 20px auto;
+	border-radius: 0.5em 0.5em 0.5em 0.5em;
+	background-color: #444; 
+	color: #D9EEF7;
+    cursor: pointer;
+    font: 18px/100% Arial,Helvetica,sans-serif;
+    outline: medium none;
+    padding: 0.5em 2em 0.55em;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    vertical-align: baseline;
+}
+
+p {
+	text-align: justify;
+	padding-right:  10%;
+}
+
+#calc{
+	height: 350px;
+}
+
+section div {
+	position: relative;
+	display: inline-block;
+	width: 50%;
+}
+
+#intro_field{
+	width: 80%;
+	
+}
+.screen {
+	font-size: 24px;
+	text-align: right;
+	width:98%;
+}
+
+#calc_field {
+	width: 300px;
+	height: 300px;
+	cursor: pointer;
+}
+
+
+.button {
+	padding-top: 20px;
+	font-size: 24px;
+	display: inline-block;
+	width: 73px;
+	height: 52px;
+	text-align: center;
+	border: solid 1px black;
+}
+
+.button:hover , #cls:hover{
+	background-color: #dc4;
+}
+
+#cls{
+	text-align: center;
+	width: 25px;
+	height: 30px;
+	border: solid 1px black;
+	position: absolute;
+	left 10px;
+	font-size: 24px;
+	background-color: red;
+}
