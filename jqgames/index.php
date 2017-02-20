@@ -20,38 +20,43 @@
 
 	<div id="content">
 		<section id="itro">
-			<button>Описание</button>
+			<button class = 'keys'>Описание</button>
 			<div id="intro_field">
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin metus tortor, elementum id felis at, vulputate tincidunt ipsum. Vestibulum ornare eros vitae lacus sodales fermentum. Vestibulum dapibus elit vitae interdum lacinia. Quisque et diam a tortor scelerisque consectetur vel nec ante. Nunc sit amet orci nec elit ultricies tempor. Nulla tincidunt viverra diam vitae sodales. Aliquam at ultricies leo. Pellentesque quis diam et nulla tincidunt suscipit ac ac sem. Suspendisse pellentesque urna arcu, ac lacinia enim iaculis a. Pellentesque quis urna ac sem bibendum condimentum.</p>
 			</div>
 		</section>
 
 		
-			<button>Калькулятор</button>
+			<button class = 'keys'>Калькулятор</button>
 			<section id="calc">
 				<div class="desc">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin metus tortor, elementum id felis at, vulputate tincidunt ipsum. Vestibulum ornare eros vitae lacus sodales fermentum. Vestibulum dapibus elit vitae interdum lacinia. Quisque et diam a tortor scelerisque consectetur vel nec ante. Nunc sit amet orci nec elit ultricies tempor. Nulla tincidunt viverra diam vitae sodales. Aliquam at ultricies leo. Pellentesque quis diam et nulla tincidunt suscipit ac ac sem. Suspendisse pellentesque urna arcu, ac lacinia enim iaculis a. Pellentesque quis urna ac sem bibendum condimentum.</p>
 				</div>
 				<div id="calc_field">
-				<div id="cls">C</div>
-					<input class="screen" type="text" value="0" disabled>
+				<div class = "calc_button" id="cls">C</div>
+					<input id="calc_screen" type="text" value="" disabled>
 
 					<!--here generator.js inserting div.buttons -->
+
 				</div>
 			</section>
 
 		<section id="nums">
-			<button>Цифры</button>
+			<button class = 'keys'>Цифры</button>
 			<div class="desc">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin metus tortor, elementum id felis at, vulputate tincidunt ipsum. Vestibulum ornare eros vitae lacus sodales fermentum. Vestibulum dapibus elit vitae interdum lacinia. Quisque et diam a tortor scelerisque consectetur vel nec ante. Nunc sit amet orci nec elit ultricies tempor. Nulla tincidunt viverra diam vitae sodales. Aliquam at ultricies leo. Pellentesque quis diam et nulla tincidunt suscipit ac ac sem. Suspendisse pellentesque urna arcu, ac lacinia enim iaculis a. Pellentesque quis urna ac sem bibendum condimentum.</p>
 			</div>
 			<div id="nums_field">
-				
+				<input id="nums_screen" type="text" value="" disabled>
+
+				<!--here generator.js inserting div.buttons -->
+
+				<button id = 'nums_start' >Начать!</button>
 			</div>
 		</section>	
 
 		<section id="tictac">
-			<button>Крестики нолики</button>
+			<button class = 'keys'>Крестики нолики</button>
 			<div class="desc" >
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin metus tortor, elementum id felis at, vulputate tincidunt ipsum. Vestibulum ornare eros vitae lacus sodales fermentum. Vestibulum dapibus elit vitae interdum lacinia. Quisque et diam a tortor scelerisque consectetur vel nec ante. Nunc sit amet orci nec elit ultricies tempor. Nulla tincidunt viverra diam vitae sodales. Aliquam at ultricies leo. Pellentesque quis diam et nulla tincidunt suscipit ac ac sem. Suspendisse pellentesque urna arcu, ac lacinia enim iaculis a. Pellentesque quis urna ac sem bibendum condimentum.</p>
 			</div>
@@ -61,7 +66,7 @@
 		</section>
 
 		<section id="logic">
-			<button>Логика</button>
+			<button class = 'keys'>Логика</button>
 			<div class="desc" >
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin metus tortor, elementum id felis at, vulputate tincidunt ipsum. Vestibulum ornare eros vitae lacus sodales fermentum. Vestibulum dapibus elit vitae interdum lacinia. Quisque et diam a tortor scelerisque consectetur vel nec ante. Nunc sit amet orci nec elit ultricies tempor. Nulla tincidunt viverra diam vitae sodales. Aliquam at ultricies leo. Pellentesque quis diam et nulla tincidunt suscipit ac ac sem. Suspendisse pellentesque urna arcu, ac lacinia enim iaculis a. Pellentesque quis urna ac sem bibendum condimentum.</p>
 			</div>
@@ -75,8 +80,8 @@
 		
 	</footer>
 
-<script type="text/javascript" src="games.js"></script>
-<script type="text/javascript" src="generator.js"></script>
 
+<script type="text/javascript" src="generator.js"></script>
+<script type="text/javascript" src="games.js"></script>
 </body>
 </html>

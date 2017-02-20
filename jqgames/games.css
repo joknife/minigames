@@ -1,6 +1,9 @@
+/* reset margin	*/
 * {
 	margin: 0;
 }
+
+/* header	*/
 
 #header {
 	height: 125px;
@@ -9,6 +12,7 @@
 
 #header a {
 	float: left;
+	margin: 0 10%;
 }
 
 #logo {
@@ -18,7 +22,19 @@
     padding-top: 30px;
 }
 
-button {
+#intro_field{
+	width: 80%;
+	
+}
+
+/* common */
+section > div {
+	position: relative;
+	display: inline-block;
+	width: 50%;
+}
+
+.keys {/* nice button	*/
 	display: block;
 	width: 180px;
 	margin: 20px auto;
@@ -37,27 +53,28 @@ button {
 
 p {
 	text-align: justify;
-	padding-right:  10%;
+	padding: 0 10%;
 }
+
+/* calc	*/
 
 #calc{
 	height: 350px;
 }
 
-section div {
+section > div {
 	position: relative;
 	display: inline-block;
 	width: 50%;
 }
 
-#intro_field{
-	width: 80%;
-	
-}
-.screen {
+
+#calc_screen {
 	font-size: 24px;
 	text-align: right;
 	width:98%;
+	background-color: white;
+	color: black;
 }
 
 #calc_field {
@@ -67,7 +84,7 @@ section div {
 }
 
 
-.button {
+.calc_button {
 	padding-top: 20px;
 	font-size: 24px;
 	display: inline-block;
@@ -77,17 +94,50 @@ section div {
 	border: solid 1px black;
 }
 
-.button:hover , #cls:hover{
+.calc_button:hover , #cls:hover{
 	background-color: #dc4;
 }
 
 #cls{
+	padding: 0;
 	text-align: center;
 	width: 25px;
-	height: 30px;
+	height: 26px;
 	border: solid 1px black;
 	position: absolute;
-	left 10px;
 	font-size: 24px;
 	background-color: red;
+}
+
+/* numeric */
+
+#nums_screen {
+	font-size: 24px;
+	text-align:center;
+	width:98%;
+	background-color: white;
+	color: black;
+}
+
+#nums_field {
+
+	width: 350px;	
+	cursor: pointer;
+}
+
+.nums_button {
+	
+	float: left;
+	line-height: 68px;
+	font-size: 24px;
+	display: inline-block;
+	width: 68px;
+	height: 68px;
+	text-align: center;
+	border: solid 1px black;
+}
+
+#nums_start {
+	margin-left: 40%;
+	margin-top: 20px;
 }
