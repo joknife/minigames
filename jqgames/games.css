@@ -3,6 +3,19 @@
 	margin: 0;
 }
 
+body{
+	color: #eee;
+	background-color: #777;
+}
+/*accordeon init*/
+section {
+	display: none;
+}
+
+#intro{
+	display: block;	
+}
+
 /* header	*/
 
 #header {
@@ -31,18 +44,37 @@
 section > div {
 	position: relative;
 	display: inline-block;
-	width: 50%;
+	width: 45%;
 }
 
-.keys {/* nice button	*/
+.desc{
+	float: left;
+}
+
+.keys {/* nice keys button	*/
 	display: block;
-	width: 180px;
+	width: 280px;
 	margin: 20px auto;
 	border-radius: 0.5em 0.5em 0.5em 0.5em;
 	background-color: #444; 
 	color: #D9EEF7;
     cursor: pointer;
     font: 18px/100% Arial,Helvetica,sans-serif;
+    outline: medium none;
+    padding: 0.5em 2em 0.55em;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    vertical-align: baseline;
+}
+
+.buttons{ /*NICE GAME BUTTON*/
+	margin: 20px 35%;
+	border-radius: 0.5em 0.5em 0.5em 0.5em;
+	background-color: #444; 
+	color: #D9EEF7;
+    cursor: pointer;
+    font: 14px/100% Arial,Helvetica,sans-serif;
     outline: medium none;
     padding: 0.5em 2em 0.55em;
     text-align: center;
@@ -62,18 +94,10 @@ p {
 	height: 350px;
 }
 
-section > div {
-	position: relative;
-	display: inline-block;
-	width: 50%;
-}
-
-
 #calc_screen {
 	font-size: 24px;
 	text-align: right;
-	width:98%;
-	background-color: white;
+	width:98%;	
 	color: black;
 }
 
@@ -114,8 +138,7 @@ section > div {
 #nums_screen {
 	font-size: 24px;
 	text-align:center;
-	width:98%;
-	background-color: white;
+	width:98%;	
 	color: black;
 }
 
@@ -123,6 +146,7 @@ section > div {
 
 	width: 350px;	
 	cursor: pointer;
+
 }
 
 .nums_button {
@@ -135,9 +159,93 @@ section > div {
 	height: 68px;
 	text-align: center;
 	border: solid 1px black;
+	background-color: white;
 }
 
 #nums_start {
-	margin-left: 40%;
+
+}
+
+/* tictac*/
+#tictac_field {
+	width: 235px;	
+	cursor: pointer;
+}
+
+#tt_screen {
+	font-size: 24px;
+	text-align:center;
+	width:98%;	
+	color: black;
+}
+
+.tt_button {
+	
+	float: left;
+	line-height: 75px;
+	font-size: 36px;
+	display: inline-block;
+	width: 75px;
+	height: 75px;
+	text-align: center;
+	border: solid 1px black;
+}
+
+#tt_clear {
+	margin-left: 30%;
 	margin-top: 20px;
+}
+
+/*logic*
+
+#logic_done{
+	display: none;
+}*/
+
+.logic_board, .play_board{
+	width: 249px;
+	height: 62px;
+	margin: 10px 20px;
+	border: 1px solid white;
+}
+
+.item, .coll_item{
+	text-align: center;
+	line-height: 60px;
+	font-size: 48px;
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+	border-radius: 40px;
+	border: 1px solid white;
+	margin :auto;
+	cursor: pointer;
+}
+
+#collection {
+	width: 373px;
+	height: 62px;
+	margin: 10px 20px;
+	border: 1px solid white;
+}
+
+.answer_board{	
+	width: 249px;
+	height: 32px;
+	margin: 10px 20px;
+	border: 1px solid white;
+
+}
+
+.answer_item{
+	text-align: center;
+	line-height: 60px;
+	font-size: 48px;
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	border-radius: 30px;
+	border: 1px solid white;
+	margin-left: 20px;
+	cursor: pointer;
 }
