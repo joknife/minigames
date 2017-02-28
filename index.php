@@ -4,6 +4,6 @@
 	<title>serg</title>
 </head>
 <body>
-<p>serg main page</p>
+<?php phpinfo() ?>
 </body>
 </html>
