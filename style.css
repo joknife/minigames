@@ -1,0 +1,52 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html{
+
+	min-height: 100%;
+}
+
+body{
+	color: #eee;
+	background-color: #777;	
+}
+
+h1, p ,#hint {
+	text-align: center;
+}
+
+#login {
+	width: 215px;
+	height: 180px;
+	margin: 20px auto;
+	text-align: center;
+}
+
+#go{
+	width: 70px;
+	height: 30px;
+	margin-top: 20px;
+}
+
+#chat{
+	float: left;
+	margin-right: 100px;
+	width: 50%;
+}
+
+#text{
+	padding-bottom: 100px;
+}
+
+#send_area{
+	width: 250px;
+	height: 30px;
+	position: absolute;
+	bottom: 10px;
+}
+
+#msg{
+	width: 250px;
+}
