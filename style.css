@@ -1,7 +1,3 @@
-*{
-	margin: 0;
-	padding: 0;
-}
 
 html{
 
@@ -32,21 +28,26 @@ h1, p ,#hint {
 
 #chat{
 	float: left;
-	margin-right: 100px;
-	width: 50%;
+	margin: 20px 100px;
+	width: 350px;
 }
 
 #text{
-	padding-bottom: 100px;
+	margin-bottom: 100px;
+	overflow: auto;
 }
 
 #send_area{
 	width: 250px;
 	height: 30px;
 	position: absolute;
-	bottom: 10px;
+	bottom: 40px;
 }
 
 #msg{
 	width: 250px;
+}
+
+#name{
+	color: blue;
 }

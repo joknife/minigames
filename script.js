@@ -49,12 +49,10 @@ function showChat() {
 		timeout: 1000,
 		success : function (data){
 			$('#text').html(data);
-			//.console.log(data);
 		}
 	})	
 }
 setInterval(showChat, 1000);
-//document.write($('#name').text());
 
 $('#msg').keypress(function (key) {
 	

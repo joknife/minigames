@@ -5,6 +5,8 @@
 	</div>
 	<div id = "send_area">
 		Вы вошли как <span id="name"> <?php echo $name; ?></span>.
+		<br>
+		Отправте 'out' чтоб выйти. 
 		<input  id="msg" type="text" placeholder="НАПИШИ СЮДА И НАЖМИ ENTER">
 		</input>
 	</div>	

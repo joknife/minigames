@@ -12,6 +12,7 @@
 			unset($_SESSION['id']);
 			echo "logout";
 		} else {
+			$text = htmlspecialchars($text);
 			$filename = "../chat.txt";
 			$str = "\n$name : $text";
 			$file = fopen($filename, 'a');
