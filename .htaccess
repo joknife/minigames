@@ -1,4 +1,3 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ main.php [L,QSA]
-#RewriteRule ^(index.*)$ main.php [L,QSA]
+RewriteRule ^(.*)$ index.php [L,QSA]

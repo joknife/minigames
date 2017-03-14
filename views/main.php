@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Main page</title>
-</head>
-<body>
-<a href="jqgames/index.html">Mini games</a>
-<a href="netgames">Net games</a>
+<a class="butt" href="jqgames/index.html">Mini games</a>
+<a class="butt" href="chat">Chat</a>
+<a class="butt" href="tictac">TicTac</a>
 <style type="text/css">
 	body{
 		color: #eee;
 		background-color: #777;
 	}
-	a {
+	.butt {
 		display: block;
 		width: 280px;
 		margin: 20px auto;
@@ -29,5 +23,3 @@
 	    vertical-align: baseline;
 	}
 </style>
-</body>
-</html>

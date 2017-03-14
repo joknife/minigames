@@ -9,7 +9,28 @@ body{
 	background-color: #777;	
 }
 
-h1, p ,#hint {
+/* header	*/
+
+#header {
+	height: 125px;
+	background-color: #444;
+}
+
+#header a {
+	float: left;
+	margin: 0 10%;
+}
+
+#logo {
+	color: #ccc;
+	width: 50%;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+/* login */
+
+p ,#hint {
 	text-align: center;
 }
 
@@ -26,22 +47,29 @@ h1, p ,#hint {
 	margin-top: 20px;
 }
 
+/* chat */
+
 #chat{
-	float: left;
-	margin: 20px 100px;
-	width: 350px;
+	margin: 20px 10px;
+	width: 100%;
+}
+
+#list{
+	display: inline-block;
+	width: 200px;
 }
 
 #text{
-	margin-bottom: 100px;
-	overflow: auto;
+	display: inline-block;
+	margin-left: 100px;
 }
 
 #send_area{
+	display: inline-block;
 	width: 250px;
 	height: 30px;
-	position: absolute;
-	bottom: 40px;
+	/*position: absolute;
+	bottom: 40px;*/
 }
 
 #msg{

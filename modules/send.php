@@ -6,14 +6,14 @@
 
 	} else {
 
-		$name = $_POST['name'];
+		$name = $_SESSION['id'];//$_POST['name'];
 		$text = $_POST['text'];
 		if ($text == 'out'){
 			unset($_SESSION['id']);
 			echo "logout";
 		} else {
 			$text = htmlspecialchars($text);
-			$filename = "../chat.txt";
+			$filename = "../public/chat.txt";
 			$str = "\n$name : $text";
 			$file = fopen($filename, 'a');
 			fwrite($file, $str);

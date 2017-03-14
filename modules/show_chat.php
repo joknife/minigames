@@ -1,10 +1,6 @@
 <?php
-	/*session_start();
-	$name = $_SESSION['id'];
-	include 'db.php';
-	$sel = ""
-    */
-	$file = file('../chat.txt');
+	
+	$file = file('../public/chat.txt');
 	$count = count($file);
 	$set = 0;
 	if ($count > 20){

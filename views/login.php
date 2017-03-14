@@ -8,3 +8,4 @@
 </div>
 
 <div id="hint"> </div>
+<script type="text/javascript" src="login.js"></script>
