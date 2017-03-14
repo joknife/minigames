@@ -79,3 +79,32 @@ p ,#hint {
 #name{
 	color: blue;
 }
+
+/* tt */
+
+#tt_area{
+	margin-left: 30px;
+	width: 400px;
+}
+
+#status{
+	font-size: 24px;
+	text-align:center;
+	width:96%;	
+	color: black;
+}
+
+.cell{
+	float: left;
+	line-height: 75px;
+	font-size: 36px;
+	display: inline-block;
+	width: 75px;
+	height: 75px;
+	text-align: center;
+	border: solid 1px black;
+}
+
+#info{
+
+}
