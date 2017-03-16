@@ -2,7 +2,7 @@
 
 session_start();
 
-if (!isset($_POST['name'])){ exit();}
+if (!isset($_POST['name']) && !isset($_POST['pass'])){ exit();}
 
 $name = $_POST['name'];
 $pass = $_POST['pass'];

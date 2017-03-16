@@ -1,12 +1,14 @@
-<p>in process</p>
+<button id="logout" onclick="logout()" >Выход</button>
+<div id="deb"></div>
+
 <div id="tt_area">
+
 	<input type="text" id="status" disabled />
 	<div id="field">
 		
 	</div>
-
 </div>
-<p id="info">info</p>
 
-<p><a href="chat">chat</a></p>
+<div id="info">info</div>
+
 <script type="text/javascript" src="tt.js"></script>

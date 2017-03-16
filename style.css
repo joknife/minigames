@@ -41,7 +41,7 @@ p ,#hint {
 	text-align: center;
 }
 
-#go{
+#go, #logout{
 	width: 70px;
 	height: 30px;
 	margin-top: 20px;
@@ -103,6 +103,12 @@ p ,#hint {
 	height: 75px;
 	text-align: center;
 	border: solid 1px black;
+	cursor: pointer;
+}
+
+.cell:hover{
+	background-color: red;
+
 }
 
 #info{

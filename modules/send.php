@@ -1,12 +1,12 @@
 <?php
 	session_start();
-	if (!isset($_POST['name']) && !isset($_POST['text'])){
+	if (!isset($_POST['name']) && !isset($_POST['text']) && !isset($_SESSION['id'])){
 
 		echo "Error massage";
 
 	} else {
 
-		$name = $_SESSION['id'];//$_POST['name'];
+		$name = $_SESSION['id'];
 		$text = $_POST['text'];
 		if ($text == 'out'){
 			unset($_SESSION['id']);

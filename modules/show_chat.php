@@ -1,5 +1,10 @@
 <?php
 	
+	session_start();
+	if (!isset($_SESSION['id'])) {
+		exit();
+	}
+	
 	$file = file('../public/chat.txt');
 	$count = count($file);
 	$set = 0;
