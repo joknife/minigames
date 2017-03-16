@@ -1,9 +1,6 @@
 <?php
 	session_start();
 
-	//error_reporting(E_ALL);
-	//ini_set('display_errors', 1);
-
 	$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 	$parts = explode('/',trim($path,'/'));
 	
@@ -34,6 +31,7 @@
 				} else {
 					$title = "Крестики нолики";
 					$header = "Крестики нолики";
+					$name = $_SESSION['id'];
 					include_once 'views/head.php';
 					include 'views/tictac.php';
 				}

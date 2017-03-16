@@ -2,10 +2,14 @@
 
 session_start();
 
-if (!isset($_POST['name']) && !isset($_POST['pass'])){ exit();}
+if (!isset($_POST['name']) && !isset($_POST['pass'])){ exit('Че то ничего не пришло');}
 
 $name = $_POST['name'];
 $pass = $_POST['pass'];
+
+if(!preg_match('/^[a-z0-9]{1,14}$/i', $_POST['name'])) exit('Таких имен не бывает, или пиши английскими');
+if(!preg_match('/^[a-z0-9]{1,14}$/i', $_POST['pass'])) exit('Очень мудреный пароль, давай попроще');
+
 
 include 'db.php';
 

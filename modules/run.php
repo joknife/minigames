@@ -35,8 +35,6 @@
 
 			$msg = $status . " " . $move . " ";
 			echo $msg;
-			//var_dump($move);
-			//var_dump($data);
 			break;
 
 		case 'wait':
@@ -51,6 +49,11 @@
 				break;
 			}
 
+			if ($data[0] == 5) {
+				echo "5 0";
+				break;
+			}
+
 			if ($data[0] == $move) {
 
 				$status = 2;
@@ -62,8 +65,7 @@
 
 			$msg = $status . " " . $data[1] . " ";
 			echo $msg;
-			//var_dump($move);
-			//var_dump($data);
+			
 			break;
 		
 		case 'move':
@@ -90,15 +92,17 @@
 			$target = $_POST['move'];
 			$m = $move + 2;
 
-			$matrix = explode(" ", $data2); 
-
+			$matrix = explode(" ", $data[2]);
 			$matrix[$target - 1] = $m;
+			$data[2] = implode(" ", $matrix);
 			$data[1] = $target;
 			$status = 1;
+
 			
 
-			if (iswin($matrix)) {
+			if (iswin($matrix) == TRUE) {
 			 	$status = 5;
+			 	$data[0] = 5;
 			}
 
 			$data = serialize($data);
@@ -117,13 +121,43 @@
 	{
 		$cc = 0;
 		$cr = 0;
-		for($i = 0; $i < 4; $i++){
-			for ($j = 0; $j < 4; $j++){
-				$arr = $matrix[($i*5 + $j)];
+		$c = -1;
+		$r = -1;
+		$ans = FALSE;
+
+		for($i = 0; $i < 5; $i++){
+			for ($j = 0; $j < 5; $j++){
+				$arr[$i][$j] = $matrix[($i*5 + $j)];
 			}
 		}
-//TODO chekout arr
-		$ans = FALSE;
+
+		for($i = 0; $i < 5; $i++){
+			for ($j = 0; $j < 5; $j++){
+				
+				if ($cc == 3 || $cr == 3) {
+					$ans = TRUE;
+					break;
+				}
+
+				if ($arr[$i][$j] == $c && $c != 0 ) {
+					$cc++;
+				} else {
+					$cc = 0;
+					$c = $arr[$i][$j];
+				}
+
+				if ($arr[$j][$i] == $r && $r != 0 ) {
+					$cr++;
+				} else {
+					$cr = 0;
+					$r = $arr[$j][$i];
+				}
+			}
+		}
+
+
+//TODO chekout diag
+		
 		return $ans;
 
 	}

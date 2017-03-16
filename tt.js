@@ -75,12 +75,14 @@ function run() {
 						window.waitID = window.setInterval(wait_next, 1000);
 					}
 
-					if (data[0] == 5){
+					if (data[0] == '5' && status != 5){
+						clearInterval(window.runID);
+						status = 6;
 						loose();
 						return;
 					}
 
-					if (data[0] == 2){
+					if (data[0] == '2'){
 
 						status = 2;
 
@@ -104,6 +106,8 @@ function run() {
 
 		$('#status').attr('value', 'Ваш ход!');
 	}
+
+	if (status == 5 || status == 6) {clearInterval(window.runID);}
 }
 
 $('body').on('click', '.cell', function () {
@@ -132,12 +136,14 @@ $('body').on('click', '.cell', function () {
 					window.waitID = window.setInterval(wait_next, 1000);
 				}
 
-				if (data[0] == 5) {
+				if (data[0] == '5') {
+					status = 5;
+					clearInterval(window.runID);
 					win();
 					return;
 				}
 
-				if (data[0] == 1) {
+				if (data[0] == '1') {
 					status = 1;
 				}
 							
@@ -153,13 +159,11 @@ $('body').on('click', '.cell', function () {
 function loose() {
 
 	$('#status').attr('value', 'Вы пргоиграли!');
-	clearInterval(window.runID);
 }
 
 function win() {
 	
-	$('#status').attr('value', 'Вы выиграли!');
-	clearInterval(window.runID);	
+	$('#status').attr('value', 'Вы выиграли!');	
 }
 
 function logout() {
