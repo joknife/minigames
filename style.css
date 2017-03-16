@@ -9,6 +9,13 @@ body{
 	background-color: #777;	
 }
 
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	border: dotted 1px #000;
+}
 /* header	*/
 
 #header {

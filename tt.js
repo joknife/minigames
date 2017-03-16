@@ -71,12 +71,18 @@ function run() {
 
 					if (data[0] == '0'){
 						status = 0;
+						move = '';
 						clearInterval(window.runID);
 						window.waitID = window.setInterval(wait_next, 1000);
 					}
 
 					if (data[0] == '5' && status != 5){
+
+						var i = parseInt(move) + 1;
+						$('#'+data[1]).html(sign[i]);
+						
 						clearInterval(window.runID);
+						
 						status = 6;
 						loose();
 						return;
@@ -132,6 +138,7 @@ $('body').on('click', '.cell', function () {
 
 				if (data[0] == '0') {
 					status = 0;
+					move ='';
 					clearInterval(window.runID);
 					window.waitID = window.setInterval(wait_next, 1000);
 				}
@@ -152,18 +159,19 @@ $('body').on('click', '.cell', function () {
 				$('#info').append('<p> ошибка сети</p>');
 			}
 		})
-
-
 })
+
 
 function loose() {
 
 	$('#status').attr('value', 'Вы пргоиграли!');
+	$('#info').html("<h3> <a href = 'tictac'>Обновите страницу</a></h3>");
 }
 
 function win() {
 	
 	$('#status').attr('value', 'Вы выиграли!');	
+	$('#info').html("<h3> <a href = 'tictac'>Обновите страницу</a></h3>");
 }
 
 function logout() {

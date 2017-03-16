@@ -4,8 +4,10 @@
 	if (!isset($_SESSION['id'])) {
 		exit();
 	}
-	
-	$file = file('../public/chat.txt');
+	$file = '../public/chat.txt';
+	if(file_exists($file)){
+		$file = file($file);
+	}
 	$count = count($file);
 	$set = 0;
 	if ($count > 20){

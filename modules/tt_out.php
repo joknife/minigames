@@ -15,8 +15,15 @@
 	
 
 	$name = $_SESSION['id'];
-	$del = "DELETE FROM tictac WHERE name1='$name' OR name2='$name'";
-	$res = mysqli_query($db_link, $del) or die (mysqli_error($db_link));
+	$sel = "SELECT * FROM tictac WHERE name1='$name' OR name2='$name'";
+	$res = mysqli_query($db_link,$sel) or die (mysqli_error($db_link));
+	$rec_num = mysqli_num_rows($res);
+
+	if ($rec_num > 0)  {
+		$del = "DELETE FROM tictac WHERE name1='$name' OR name2='$name'";
+		$res = mysqli_query($db_link, $del) or die (mysqli_error($db_link));	
+	}
+	
 	
 	if (isset($_SESSION['status'])){
 		unset($_SESSION['status']);

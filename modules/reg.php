@@ -35,6 +35,7 @@
 			$name1 = $str['name1'];
 			$ins = "UPDATE tictac SET online='$time', name2='$name', status=2 WHERE name1='$name1'";
 			$res = mysqli_query($db_link, $ins) or die (mysqli_error('39' . $db_link));
+			
 			$_SESSION['status'] = 2;
 			$_SESSION['move'] = 0;
 			$_SESSION['file'] = $name1 . $name;
@@ -48,6 +49,10 @@
 			echo "Ждем второго";
 		}
 		if ($_SESSION['status'] == 2){
+
+			$del = "DELETE FROM tictac WHERE name1='$name' OR name2='$name'";
+			$res = mysqli_query($db_link, $del) or die (mysqli_error($db_link));
+			
 			if ($str['name1'] == $name){
 
 				$_SESSION['move'] = 1;
